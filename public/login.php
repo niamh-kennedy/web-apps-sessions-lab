@@ -1,8 +1,15 @@
-<?php require_once('../template/header.php'); ?>
+<?php 
+require_once ('config.php'); 
+session_start();
+?>
 
-<?php require_once ('config.php'); ?>
-
-<link rel="stylesheet" type="text/css" href="../css/signin.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/signin.css">
     <title>Sign in</title>
 </head>
 
@@ -34,6 +41,9 @@
 		{
 			echo 'Success'; /* Success: set session variables and redirect to protected page */
 			$_SESSION['Username'] = $Username; // store Username to the session
+			$_SESSION['Active'] = true;
+			header("location:index.php");
+			exit;
 		} else		
 			echo 'Incorrect Username or Password';
 	}
