@@ -32,7 +32,8 @@
 		/* check if the form's username and password matches */
 		if(($_POST['Username'] == $Username) && ($_POST['Password'] == $Password))
 		{
-			echo 'Success';
+			echo 'Success'; /* Success: set session variables and redirect to protected page */
+			$_SESSION['Username'] = $Username; // store Username to the session
 		} else		
 			echo 'Incorrect Username or Password';
 	}

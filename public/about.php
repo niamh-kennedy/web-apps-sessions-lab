@@ -14,7 +14,8 @@
       </div>
 
         <div class="mainarea">
-            <h1>Title </h1>
+            <h1>Status: You are logged in <?php echo $_SESSION['Username']; ?></h1>
+            <p class="lead">This is where we will put the logout button </h1>
             <p class="lead">This is where we will put the logout button</p>
 
             <form action="" method="post" name="Logout_Form" class="form-signin">
