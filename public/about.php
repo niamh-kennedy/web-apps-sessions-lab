@@ -30,4 +30,3 @@
        </div>
 
           <?php require_once '../template/footer.php';?>
-		  //addedd for testing
