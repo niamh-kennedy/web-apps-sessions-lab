@@ -1,4 +1,7 @@
 <?php require_once('../template/header.php'); ?>
+
+<?php require_once ('config.php'); ?>
+
 <link rel="stylesheet" type="text/css" href="../css/signin.css">
     <title>Sign in</title>
 </head>
@@ -20,6 +23,20 @@
         <button name="Submit" value="Login" class="button" type="submit">Sign in</button>
 
     </form>
+	
+	<?php 
+	/* check if the login form has been submitted */
+	
+	if(isset($_POST['Submit']))
+	{
+		/* check if the form's username and password matches */
+		if(($_POST['Username'] == $Username) && ($_POST['Password'] == $Password))
+		{
+			echo 'Success';
+		} else		
+			echo 'Incorrect Username or Password';
+	}
+	?>
 </div>
 </body>
 </html>
