@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64603390-2a09-4ab4-ae71-65d5374cbcbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/clean.php" afterDir="false" />
+    <list default="true" id="64603390-2a09-4ab4-ae71-65d5374cbcbf" name="Default Changelist" comment="Part 6.1 - Form validation to cleanse username and password input">
+      <change afterPath="$PROJECT_DIR$/public/news.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/headerNoLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/session.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,8 +193,17 @@
       <workItem from="1616354936951" duration="1522000" />
       <workItem from="1712751943521" duration="113000" />
       <workItem from="1712755421765" duration="290000" />
-      <workItem from="1712759023025" duration="6810000" />
+      <workItem from="1712759023025" duration="8019000" />
     </task>
+    <task id="LOCAL-00001" summary="Part 6.1 - Form validation to cleanse username and password input">
+      <option name="closed" value="true" />
+      <created>1712766823884</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712766823884</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -262,6 +267,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Part 6.1 - Form validation to cleanse username and password input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 6.1 - Form validation to cleanse username and password input" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_header" />
