@@ -3,14 +3,8 @@
 <body>
     <div class="container">
         <div class="header clearfix">
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contacts.php">Contact</a></li>
-                    <li><a href="news.php">News</a></li>
-                </ul>
-            </nav>
+            <?php require_once '../template/navBar.php';?>
+
             <h3 class="text-muted">PHP Login exercise - News page</h3>
         </div>
 
