@@ -28,7 +28,7 @@ session_start();
         if($cleanUsername == $Username && $cleanPassword == $Password)
         {
             echo 'Success'; /* Success: set session variables and redirect to protected page */
-            $_SESSION['Username'] = "Username"; // store Username to the session
+            $_SESSION['Username'] = $cleanUsername; // store Username to the session
             $_SESSION['Active'] = true;
             header("location:index.php");
             exit;
