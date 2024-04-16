@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64603390-2a09-4ab4-ae71-65d5374cbcbf" name="Default Changelist" comment="Part 6.4 - Web Application now checks login information from a database using 'login.php'. A new user can be created on 'register.php', which are then forced to login using the registered details." />
+    <list default="true" id="64603390-2a09-4ab4-ae71-65d5374cbcbf" name="Default Changelist" comment="Part 6.4 - Web Application now checks login information from a database using 'login.php'. A new user can be created on 'register.php', which are then forced to login using the registered details.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,7 +208,7 @@
       <workItem from="1712759023025" duration="10639000" />
       <workItem from="1712880816504" duration="15000" />
       <workItem from="1713291960467" duration="5540000" />
-      <workItem from="1713297560309" duration="4623000" />
+      <workItem from="1713297560309" duration="5381000" />
     </task>
     <task id="LOCAL-00001" summary="Part 6.1 - Form validation to cleanse username and password input">
       <option name="closed" value="true" />
@@ -256,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713302150705</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Part 6.4 - Web Application now checks login information from a database using 'login.php'. A new user can be created on 'register.php', which are then forced to login using the registered details.">
+      <option name="closed" value="true" />
+      <created>1713302342832</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713302342832</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
