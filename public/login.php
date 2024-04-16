@@ -1,5 +1,4 @@
-<?php 
-require_once ('../config.php');
+<?php
 require_once ('../src/clean.php');
 $clean = new clean();
 
@@ -17,23 +16,43 @@ session_start();
     </head>
 
     <?php
+
     /* check if the login form has been submitted */
+    if(isset($_POST['Submit'])) {
+        try {
+            require_once "../src/db_connect.php";
 
-    if(isset($_POST['Submit']))
-    {
-        $cleanUsername = $clean->cleanInput($_POST['Username']);
-        $cleanPassword = $clean->cleanInput($_POST['Password']);
+            $user = array (
+                "username" => $clean->cleanInput($_POST['Username']),
+                "password" => $clean->cleanInput($_POST['Password'])
+            );
 
-        /* check if the form's username and password matches */
-        if($cleanUsername == $Username && $cleanPassword == $Password)
-        {
+            $sql = "SELECT *
+            FROM users
+            WHERE username = :username";
+            $username = $_POST['Username'];
+
+            $statement = $connection->prepare($sql);
+            $statement->bindParam(':username', $username, PDO::PARAM_STR);
+		    $statement->execute();
+            $result = $statement->fetchAll();
+
+        } catch (PDOException $error) {
+            echo $sql . "<br>" . $error->getMessage();
+        }
+    }
+
+    /* check if the form's username and password against database */
+    if (isset($_POST['Submit'])) {
+        if ($result && $statement->rowCount() > 0) {
             echo 'Success'; /* Success: set session variables and redirect to protected page */
-            $_SESSION['Username'] = $cleanUsername; // store Username to the session
+            $_SESSION['Username'] = $username; // store Username to the session
             $_SESSION['Active'] = true;
             header("location:index.php");
             exit;
-        } else
+        } else {
             echo 'Incorrect Username or Password';
+        }
     }
     ?>
 
@@ -56,7 +75,9 @@ session_start();
                 </div>
 
                 <button name="Submit" value="Login" class="button" type="submit">Sign in</button>
+                <h4>Don't have an account? <a href="register.php">Register here</a></h4>
             </form>
+
         </div>
     </body>
 </html>

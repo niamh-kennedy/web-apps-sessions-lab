@@ -26,6 +26,7 @@ if(isset($_POST['Submit'])) {
                 "password" => $clean->cleanInput($_POST['Password'])
         );
 
+
         $sql = sprintf("INSERT INTO %s (%s) values (%s)", "users",
             implode(", ", array_keys($new_user)),
             ":" . implode(", :", array_keys($new_user)));
@@ -49,7 +50,7 @@ if (isset($_POST['Submit']) && $statement ) {
 <body>
 <div class="container">
     <form action="" method="post" name="Login_Form" class="form-signin">
-        <h2 class="form-register-heading">Welcome! To register, please enter your details below:</h2>
+        <h2 class="form-register-heading">Welcome! To register, please enter your details:</h2>
 
         <label for="inputUsername" >Username: </label>
         <input name="Username" type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
@@ -60,6 +61,7 @@ if (isset($_POST['Submit']) && $statement ) {
         <div class="checkbox">
             <button name="Submit" value="Submit" class="button" type="submit">Register</button>
         </div>
+        <h4>Already have an account? <a href="login.php">Login here</a></h4>
     </form>
 </div>
 </body>
