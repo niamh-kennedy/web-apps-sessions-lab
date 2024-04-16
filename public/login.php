@@ -1,60 +1,56 @@
 <?php
-require_once ('../src/clean.php');
-$clean = new clean();
-
+require_once('../src/functions.php');
+$functions = new functions();
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../css/signin.css">
-        <title>Sign in</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/signin.css">
+    <title>Sign in</title>
+</head>
 
-    <?php
+<?php
 
-    /* check if the login form has been submitted */
-    if(isset($_POST['Submit'])) {
-        try {
-            require_once "../src/db_connect.php";
+/* check if the login form has been submitted */
+if(isset($_POST['Submit'])) {
+    try {
+        require_once "../src/db_connect.php";
 
-            $user = array (
-                "username" => $clean->cleanInput($_POST['Username']),
-                "password" => $clean->cleanInput($_POST['Password'])
-            );
+        $username = $functions->clean($_POST['Username']);
+        $password = $functions->clean($_POST['Password']);
 
-            $sql = "SELECT *
-            FROM users
-            WHERE username = :username";
-            $username = $_POST['Username'];
+        $sql = "SELECT *
+        FROM users
+        WHERE username = :username";
 
-            $statement = $connection->prepare($sql);
-            $statement->bindParam(':username', $username, PDO::PARAM_STR);
-		    $statement->execute();
-            $result = $statement->fetchAll();
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':username', $username, PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetchAll();
 
-        } catch (PDOException $error) {
-            echo $sql . "<br>" . $error->getMessage();
-        }
+    } catch (PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
     }
+}
 
-    /* check if the form's username and password against database */
-    if (isset($_POST['Submit'])) {
-        if ($result && $statement->rowCount() > 0) {
-            echo 'Success'; /* Success: set session variables and redirect to protected page */
-            $_SESSION['Username'] = $username; // store Username to the session
-            $_SESSION['Active'] = true;
-            header("location:index.php");
-            exit;
-        } else {
-            echo 'Incorrect Username or Password';
-        }
+/* check if the form's username and password against database */
+if (isset($_POST['Submit'])) {
+    if ($result && $statement->rowCount() > 0) {
+        echo 'Success'; /* Success: set session variables and redirect to protected page */
+        $_SESSION['Username'] = $username; // store Username to the session
+        $_SESSION['Active'] = true;
+        header("location:index.php");
+        exit;
+    } else {
+        echo 'Incorrect Username or Password';
     }
-    ?>
+}
+?>
 
 
     <body>
@@ -81,3 +77,4 @@ session_start();
         </div>
     </body>
 </html>
+<?php require_once '../templates/footer.php';?>

@@ -1,4 +1,4 @@
-<?php require_once '../template/header.php';?>
+<?php require_once '../templates/header.php';?>
     <title>Contacts page</title>
   </head>
   
@@ -6,7 +6,7 @@
   <body>
     <div class="container">
       <div class="header clearfix">
-          <?php require_once '../template/navBar.php';?>
+          <?php require_once '../templates/navBar.php';?>
 
           <h3 class="text-muted">PHP Login exercise - Contacts page</h3>
       </div>
@@ -26,4 +26,4 @@
 
        </div>
 
-<?php require_once '../template/footer.php';?>
+<?php require_once '../templates/footer.php';?>

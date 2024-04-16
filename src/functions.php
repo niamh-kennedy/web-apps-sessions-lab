@@ -1,8 +1,8 @@
 <?php
 
-class clean
+class functions
 {
-    function cleanInput ($data)
+    function clean ($data)
     {
         $data = trim($data);
         $data = stripslashes($data);

@@ -1,9 +1,9 @@
-<?php require_once '../template/headerNoLogin.php';?>
+<?php require_once '../templates/headerNoLogin.php';?>
 
 <body>
     <div class="container">
         <div class="header clearfix">
-            <?php require_once '../template/navBar.php';?>
+            <?php require_once '../templates/navBar.php';?>
 
             <h3 class="text-muted">PHP Login exercise - News page</h3>
         </div>
@@ -25,4 +25,4 @@
         </div>
     </div>
 
-<?php require_once '../template/footer.php';?>
+<?php require_once '../templates/footer.php';?>

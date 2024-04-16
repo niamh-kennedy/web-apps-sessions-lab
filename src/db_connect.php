@@ -1,6 +1,6 @@
 <?php
 
-require_once '../public/config.php'; //access the login values
+require_once '../src/config.php'; //access the login values
 
 try {
     $connection = new PDO($dsn, $username, $password, $options);
