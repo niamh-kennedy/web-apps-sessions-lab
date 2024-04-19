@@ -12,13 +12,12 @@
             <h2>This page is viewable whether you are logged in or not!</h2>
 
             <form action="logout.php" method="post" name="Logout_Form" class="form-signin">
-                <button name="Submit" value="Logout" class="button" type="submit">Log out</button>
             </form>
         </div>
 
         <div class="row marketing">
             <div>
-                <h4>About page</h4>
+                <h4>News page</h4>
                 <p>Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. </p>
 
             </div>

@@ -21,7 +21,7 @@
 
     <div class="row marketing">
         <div>
-            <h4>Contacts page</h4>
+            <h4>Home page</h4>
             <p>Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. Some content goes here. </p>
 
         </div>
